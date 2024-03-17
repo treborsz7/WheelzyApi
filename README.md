@@ -80,18 +80,18 @@ public async Task<OrderDTO> GetOrders(DateTime dateFrom, DateTime dateTo, List<i
 5)
 Steps to proceed with fixing the bug in changing status from "Accepted" to "Picked Up":
 
-a) Understand the reported bug and reproduce it locally.
-b) Analyze the code related to changing statuses and identify potential issues.
-c) Write unit tests to cover the scenarios where the bug occurs.
-d) Debug the code to find the root cause of the issue.
-e) Implement the necessary code changes to fix the bug.
-f) Test the fix locally to ensure the bug is resolved.
-g) Push the changes to a feature branch in the repository.
-h) Create a pull request (PR) describing the problem, solution, and testing approach.
-i) Request code review from team members, especially from QA.
-j) Address any feedback or comments from the code review.
-k) Once approved, merge the PR into the main branch.
-l) Build the main branch
-l) Deploid 
+1) Understand the reported bug and reproduce it locally.
+2) Analyze the code related to changing statuses and identify potential issues.
+3) Write unit tests to cover the scenarios where the bug occurs.
+4) Debug the code to find the root cause of the issue.
+5) Implement the necessary code changes to fix the bug.
+6) Test the fix locally to ensure the bug is resolved.
+7) Push the changes to a feature branch in the repository.
+8) Create a pull request (PR) describing the problem, solution, and testing approach.
+9) Request code review from team members, especially from QA.
+10) Address any feedback or comments from the code review.
+11) Once approved, merge the PR into the main branch.
+12) Build the main branch
+13) Deploid 
 
 
