@@ -17,6 +17,7 @@ x-www-form-unlencoded
 If the data does not change frequently but is used frequently, I would save it in cache or on memory to improve performance and avoid excessive database lookups.
 
 3)
+```C#
 public void UpdateCustomersBalanceByInvoices(List<Invoice> invoices)
 {
         
@@ -36,10 +37,12 @@ public void UpdateCustomersBalanceByInvoices(List<Invoice> invoices)
 
    db.SaveChanges(); 
 }
+```
 
 With this change, only the query is made to search for all the customers and a save is made at the end of all
 
 4)
+```C#
 public async Task<OrderDTO> GetOrders(DateTime dateFrom, DateTime dateTo, List<int> customerIds, List<int> statusIds, bool? isActive)
 {
     var query = dbContext.Orders.AsQueryable();
@@ -76,7 +79,7 @@ public async Task<OrderDTO> GetOrders(DateTime dateFrom, DateTime dateTo, List<i
 
     return orderDTOs;
 }
-
+```
 5)
 Steps to proceed with fixing the bug in changing status from "Accepted" to "Picked Up":
 
