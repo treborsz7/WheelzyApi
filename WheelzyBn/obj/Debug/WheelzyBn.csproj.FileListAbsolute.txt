@@ -1,0 +1,12 @@
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\obj\Debug\WheelzyBn.csproj.AssemblyReference.cache
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\obj\Debug\WheelzyBn.csproj.CoreCompileInputs.cache
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\bin\Debug\WheelzyBn.dll.config
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\bin\Debug\WheelzyBn.dll
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\bin\Debug\WheelzyBn.pdb
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\bin\Debug\EntityFramework.dll
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\bin\Debug\EntityFramework.SqlServer.dll
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\bin\Debug\EntityFramework.xml
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\bin\Debug\EntityFramework.SqlServer.xml
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\obj\Debug\WheelzyBn.csproj.CopyComplete
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\obj\Debug\WheelzyBn.dll
+D:\NET\WheelzyApi\Wheelzy\WheelzyBn\obj\Debug\WheelzyBn.pdb

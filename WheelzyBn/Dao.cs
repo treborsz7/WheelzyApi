@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using WheelzyBn;
 
 public class Dao
@@ -10,7 +11,7 @@ public class Dao
 
         using (var db = new WheelzyEntities())
         {
-          
+
             db.Offers.Add(offer);
             db.Buyers.FirstOrDefault(x => x.Id == offer.Buyer_id).Amount -= offer.Price;
             db.SaveChanges();
@@ -24,7 +25,7 @@ public class Dao
         using (var db = new WheelzyEntities())
         {
             offer = db.Offers.FirstOrDefault(x => x.Id == offer.Id);
-          
+
         }
         return offer;
     }
@@ -35,20 +36,20 @@ public class Dao
         {
             //offer = db.Offers.First(x => x.Id == offer.Id);
             var otherOffers = GetOfferByCar(offer.Car_id.Value);
-          
+
             foreach (var otherOffer in otherOffers)
             {
-                if(otherOffer.Id != offer.Id)
+                if (otherOffer.Id != offer.Id)
                 {
                     otherOffer.Buyer.Amount += otherOffer.Price;
                     db.Entry(otherOffer).State = EntityState.Modified;
                 }
-                  
+
             }
 
-          
+
             db.Customers.First(x => x.Id == offer.Car.Customer_id).Amount += offer.Price;
-          
+
             offer.Acept();
             db.SaveChanges();
         }
@@ -62,12 +63,12 @@ public class Dao
         var offers = new List<Offer>();
         using (var db = new WheelzyEntities())
         {
-            offers =db.Offers
+            offers = db.Offers
                 .Include("Car")
                 .Include("Buyer")
                 .Where(x => x.Buyer_id == buyerId).ToList();
-          
-          
+
+
         }
         return offers;
     }
@@ -119,10 +120,10 @@ public class Dao
 
     internal Car AcepteCar(Car car)
     {
-        
+
         using (var db = new WheelzyEntities())
         {
-          
+
             //db.State_Chages.Add(car.History.Last());
             db.Entry(car).State = EntityState.Modified;
             db.State_Chages.Add(car.History.Last());
@@ -136,8 +137,8 @@ public class Dao
         var car = new Car();
         using (var db = new WheelzyEntities())
         {
-            car = db.Cars.Include("History").FirstOrDefault( x => x.Id == carId);
-         
+            car = db.Cars.Include("History").FirstOrDefault(x => x.Id == carId);
+
         }
         return car;
     }
@@ -212,12 +213,32 @@ public class Dao
         return customer;
     }
 
-   
 
+    //public class Invoice
+    //{
+    //    public long? CustomerId;
+    //    public decimal Total;
+    //}
 
+    //public void UpdateCustomersBalanceByInvoices(List<Invoice> invoices)
+    //{
+    //    using (var db = new WheelzyEntities())
+    //    {
+    //        var customerIds = invoices.Select(i => i.CustomerId).Distinct().ToList();
+    //        var customers = db.Customers.Where(c => customerIds.Contains(c.Id)).ToList();
 
+    //        foreach (var invoice in invoices)
+    //        {
 
+    //            var customer = db.Customers.SingleOrDefault(c => c.Id == invoice.CustomerId.Value);
+    //            if(customer != null)
+    //            {
+    //                customer.Amount -= invoice.Total;
+    //            }
+    //        }
 
+    //        db.SaveChanges();
+    //    }
     //}
 }
 

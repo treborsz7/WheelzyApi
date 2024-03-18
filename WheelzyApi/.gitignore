@@ -1,3 +1,6 @@
-bin
-obj
-packages
+**/bin
+**/packages/
+**/obj
+*.log
+.vs/
+Publish/

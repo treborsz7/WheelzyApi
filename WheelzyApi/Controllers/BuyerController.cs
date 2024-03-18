@@ -1,8 +1,4 @@
-﻿using Entitis;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
-using System.Xml.Linq;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Wheelzy.Controllers
 {
