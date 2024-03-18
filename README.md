@@ -22,6 +22,11 @@ this return a toke, use this to acept the car on
 https://localhost:7253/api/Car/Acep?carId=carId
 Authorization: Bearer + token
 
+things to improve
+*Add user creation
+*Add delivery validation
+*Add declination of car
+*Add error message return
 2)
 If the data does not change frequently but is used frequently, I would save it in cache or on memory to improve performance and avoid excessive database lookups.
 
