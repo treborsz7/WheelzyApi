@@ -9,9 +9,14 @@ This is a demo NET API conected to SQL usin Entity Framework
 
  the cars need aprobation 
  to complete this step is nesesari login as an admin
-*login on http://localhost:5145/login or https://localhost:7253
+*login on http://localhost:5145/login or https://localhost:7253/login
 using 
-x-www-form-unlencoded
+```http
+curl --location 'https://localhost:7253/login' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'username=Admin' \
+--data-urlencode 'password=Admin'
+```
 
 2)
 If the data does not change frequently but is used frequently, I would save it in cache or on memory to improve performance and avoid excessive database lookups.
